@@ -1,2 +1,2 @@
-# CSCI_3803
-web development
+# CSCI_3803_zen
+old web development assignment
