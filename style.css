@@ -1,0 +1,249 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+/* now you can feel like a jedi master */
+body, a:hover, textarea, input {
+	cursor: url(images/cursor.gif), default !important;
+}
+
+body {
+	background: #fff;
+	font: 80% georgia, sans-serif;
+}
+/* link color transitions */
+a {
+	color: #0000ff;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #00ff00;
+}
+
+a:hover, a:focus {
+	color: #0599c2;
+	text-decoration: underline;
+}
+/* abbreviation attributes */
+abbr {
+	border: none;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+/* sets the header section background and text alignment */
+header {
+	height: 25em;
+	padding: 3em 0 5em 0;
+	background: #fff 50% url(images/temple.png) no-repeat;
+	/* IE */
+	background-attachment: scroll;
+	background-image: url(images/temple.png);
+	background-size: 100% 100%;
+	text-align: center;
+}
+/* sets the general attributes of first and second header */
+h1, h2 {
+	font-weight: normal;
+	padding: 0 10%;
+	color: #fff;
+}
+/* specifies the first headers attributes */
+h1 {
+	padding-top: 0;
+	padding-bottom: .2em;
+	font-size: 3em;
+	text-transform: uppercase;
+	text-shadow: .2em .2em .2em #b8b8b8;
+}
+/* throws in the old repbulic insignia and its attributes */
+h1::before {
+	display: inline-block;
+	position: relative;
+	top: 1em;
+	content: "";
+	width: 2em;
+	height: 3em;
+	margin: -1em 1em 0 0;
+	background: url(images/swtor.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	opacity: 1;/* darkened it up a bit */
+}
+/* sets the second header attributes */
+h2 {
+	display: block;
+	padding-top: .1em;
+	padding-bottom: 1em;
+	font-size: 1.5em;
+	font-style: italic;
+	text-shadow: .2em .2em .2em #b8b8b8;
+}
+/* this little tidbit spaces the second header a bit more */
+h2::before {
+	content: " ";
+	padding: 2em;
+}
+/* sets up the h3 attributes for the page */
+h3 {
+	margin: 2em 0 0 0;
+	color: #000066;
+	font-size: 1.5em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+/* sets up the theme oriented font. dont care if YOU cant read it, it goes with the theme */
+@font-face {
+	font-family: 'galactic basic';
+	font-style: normal;
+	font-weight: normal;
+	src: url(galbasic.ttf);
+}
+
+p {
+	font-size: 1em;
+	font-family: 'galactic basic', sans-serif;
+}
+
+.page-wrapper {
+	position: relative;
+}
+
+.summary, .preamble {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.supporting h3, .supporting p {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.summary {
+	padding-top: 2em;
+}
+/* setup the paritipation and benefits section to have an image and changed the text to be a visible color */
+div.participation, div.benefits {
+	background-attachment: fixed;
+	background-image: url(images/plo_koon.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+div.participation {
+	padding: 3em 0;
+	margin-top: 3em;
+}
+
+div.benefits {
+	padding-bottom: 3em;
+	margin-bottom: 3em;
+}
+
+div.participation h3, div.benefits h3 {
+	margin-top:0;
+	color: #d0d0d0;
+}
+
+div.participation p, div.benefits p{
+	color: #707070;
+}
+/* aligning the footer */
+footer {
+	clear: both;
+	padding: 5em;
+	text-align: center;
+	background-image: url(images/lightsaber.png);
+	background-size: 100% 150%;
+}
+/* spaced the links */
+footer a {
+	padding-left: 10%;
+	font-size: 2em;
+}
+/* setting up all the navigation menu attributes for the bottom of the page */
+.sidebar {
+	background-image: url(images/jedimaster.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.sidebar h3 {
+	display: none;
+}
+
+.sidebar a {
+	color: black;
+	text-decoration: none;
+}
+
+.sidebar a:hover, .sidebar a:focus {
+	color: #ff0000;
+}
+
+.sidebar ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+}
+/* sets up the design and resource class attributes at the bottom. most are shared with one or another element */
+.design-selection, .design-archives, .zen-resources {
+	background-color: #fff;
+	opacity: .8;
+	filter: alpha(opacity=80); /* some sort of IE crap again for opacity. css validator says its wrong but w3schools says to do it */
+}
+
+.design-selection ul, .zen-resources ul {
+	margin: 0;
+}
+
+.design-selection li, .zen-resources li {
+	float: left;
+	width: 100%;
+	padding: 1.5em 10%;
+	border-top: solid .1em black;
+	font-style: italic;
+}
+/* makes the links have a gradient color when the mouse is over the element which I thought was cool so I kept it, and all the webkit nonsense needed since no one is on the same page. none of them have any difference except for a couple of their tag letters! */
+.design-selection li:hover, .design-selection li:focus {
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 0, 0, 0)),color-stop(50%, rgba(255, 0, 0, .5)), color-stop(100%, rgba(255, 0, 0, 0))); /*chrome, safari 4+ */
+	background: -moz-linear-gradient(left, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, .5) 50%, rgba(255, 0, 0, 0) 100%);/* firefox 6+ */
+	background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, .5) 50%, rgba(255, 0, 0, 0) 100%);/* chrome 10+, safari 4+ */
+	background: -o-linear-gradient(left, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, .5) 50%, rgba(255, 0, 0, 0) 100%);/* opera 11.1+ */
+	background: -ms-linear-gradient(left, rgba(255, 0, 0, 0) 0%, rgba(255, 0 , 0, .5) 50%, rgba(255, 0, 0, 0) 100%);/* IE 10+ */
+	background: linear-gradient(to right, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, .5) 50%, rgba(255, 0, 0, 0) 100%);/* W3C */
+}
+/* 
+spacing the next list element so their side by side in two columns. didn't work with my due to contradicting attributes, one being the 100% up above but I left it be for the sake of sanity
+.design-selection li:nth-child(2n+1), .zen-resources li:nth-child(2n+1) {
+	clear: left;
+}
+*/
+/* some more formating for the design, name, and resource text */
+.design-selection .design-name, .zen-resources a {
+	display: block;
+	margin-bottom: .25em;
+	font-size: 1.5em;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.design-selection h3 {
+	display: none;
+}
+
+.design-selection .designer-name {
+	color: #660000;
+	font-size: .9em;
+	font-style: normal;
+}
+
+.design-archives li.next, .design-archives li.viewall {
+	font-size: 1.5em;
+	text-align: center;
+}
